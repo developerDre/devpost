@@ -1,0 +1,45 @@
+Style:
+Lucario
+
+Language:
+C++
+
+Color Information:
+#92d7ff
+
+Font:
+Hack
+
+Code:
+// ************************************************
+//              #cppdevpost number 4
+//
+// Topic:	C++ User Input
+// Date:	December 23, 2018
+//
+// Summary:
+//			Many C++ programs require a user input, 
+// so in order to get the user's input, we use the
+// keyword "cin".
+//			In this program, we prompt the user for
+// their favorite number and print that number to
+// the screen. Note that there is no error checking
+// meaning that if the user typed a "b" the program
+// would crash.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int fav_num; // Declare fav_num as an integer
+
+	cout << "Enter Your Favorite Number: "; // Prompt the user to type a number
+
+	cin >> fav_num; // Whatever number the user entered is stored into fav_num (no error checking)
+
+	cout << "Your Favorite Number is: " << fav_num << '\n'; // Print the integer stored in fav_num
+
+	return 0; // Program exits
+}
