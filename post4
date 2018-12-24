@@ -1,14 +1,18 @@
 Style:
-Lucario
+	Lucario
 
 Language:
-C++
+	C++
 
 Color Information:
-#92d7ff
+	#92d7ff
 
 Font:
-Hack
+	Hack
+
+Export:
+	x4
+	PNG
 
 Code:
 // ************************************************
