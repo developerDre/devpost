@@ -1,0 +1,58 @@
+Style:
+	Lucario
+
+Language:
+	C++
+
+Color Information:
+	#f1dded
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 5
+//
+// Topic:	C++ User Input
+// Date:	January 1, 2018
+//
+// Summary:
+//			Last post we covered user input through
+// "cin", but what if the user inputs a value of a 
+// type that we are not expecting? 
+//			We can use "cin.ignore()" to ignore any
+// more input from the user, "cin.fail()" to check
+// if the user inputed a type we were not expecting
+// and "cin.clear()" to clear the data the user
+// previously entered.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int fav_num;
+	cout << "Enter Your Favorite Number: ";
+	cin >> fav_num;
+	
+	cin.ignore(10000, '\n');								// Ignore any more input from the user.
+	
+	while(cin.fail()){										// Check to see if "cin" failed
+	
+		cout << "Error! Enter Your Favorite Number: ";		// If "cin" did fail re-prompt the user
+		
+		cin.clear();										// Clear the input buffer
+		
+		cin >> fav_num;										// Get the user's input
+		
+		cin.ignore(10000, '\n');							// Ignore any more input from the user.
+		
+	}
+	cout << "Your Favorite Number is: " << fav_num << '\n';
+	return 0;
+}
