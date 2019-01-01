@@ -19,7 +19,7 @@ Code:
 //              #cppdevpost number 5
 //
 // Topic:	C++ User Input
-// Date:	January 1, 2018
+// Date:	January 1, 2019
 //
 // Summary:
 //			Last post we covered user input through
