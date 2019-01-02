@@ -1,0 +1,53 @@
+Style:
+	Lucario
+
+Language:
+	C++
+
+Color Information:
+	#e3b76e
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 6
+//
+// Topic:	C++ Logical Expressions
+// Date:	January 2, 2019
+//
+// Summary:
+//			Now that we know how to set variables
+// and get user input (devpost4 and devpost5), we
+// can look at how to use those variables. In order
+// to compare variables, we must look at logical
+// expressions.
+//			An expression that evaluates to true or
+// false is called a logical expression.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int var1 = 10, var2 = 20;	// Declare 2 Variables inline
+	
+    (var1 == var2)				// Equal to						Evaluates false
+	
+    (var1 != var2)				// Not equal to					Evaluates true
+	
+	(var1 < var2)				// Less than					Evaluates true
+	
+	(var1 <= var2)				// Less than or equal to		Evaluates true
+	
+	(var1 > var2)				// Greater than					Evaluates false
+	
+	(var1 >= var2)				// Greater than or equal to		Evaluates false
+
+	return 0;
+}
