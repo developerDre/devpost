@@ -18,17 +18,18 @@ Code:
 // ************************************************
 //              #cppdevpost number 6
 //
-// Topic:	C++ Logical Expressions
+// Topic:	C++ Relational Operators
 // Date:	January 2, 2019
 //
 // Summary:
 //			Now that we know how to set variables
 // and get user input (devpost4 and devpost5), we
 // can look at how to use those variables. In order
-// to compare variables, we must look at logical
-// expressions.
-//			An expression that evaluates to true or
-// false is called a logical expression.
+// to compare variables, we must look at Relational
+// Operators.
+//			Relational operators allow for the
+// comparison of alike data types. The result of
+// which always evaluates to true or false. 
 // ************************************************
 
 #include <iostream>
