@@ -1,0 +1,55 @@
+Style:
+	Lucario
+
+Language:
+	C++
+
+Color Information:
+	#c0fefe
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 7
+//
+// Topic:	C++ Conditional Statements
+// Date:	January 3, 2019
+//
+// Summary:
+//			We can create conditional statements by
+// using relational operators, or logical
+// expressions.
+//			A logical expression is an expression
+// that evaluates to true or false. By implementing
+// conditional statements, we can have a program
+// preform different tasks.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int var1 = 10, var2 = 20;							// Declare Variables
+	
+	if(var1 == var2){									// An "if...else" statement is the simplest type of conditional statement.
+
+		cout << "var1 is equal to var2." << '\n';		// Result if the Relational Operator on line 23 is true
+
+	}else{
+
+		cout << "var1 is NOT equal to var2." << '\n';	// Result if the Relational Operator on line 23 is false
+
+	}
+	
+	condition ? result_if_true : result_if_false;		// Additionally, a "?:" or ternary operator can be written all on a single line like this.
+	
+	// A "switch" is another type of conditional statement that we looked at in #cppdevpost number 3
+	
+	return 0;
+}
