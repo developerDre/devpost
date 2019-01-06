@@ -1,0 +1,55 @@
+Style:
+	Lucario
+
+Language:
+	C++
+
+Color Information:
+	#bea6ac
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 8
+//
+// Topic:	C++ Logical (Boolean) Operators
+// Date:	January 4, 2019
+//
+// Summary:
+//			In #cppdevpost number 7 we looked at
+// how relational operators can be used to form
+// conditional statements. What if we want to
+// combine relational operators?
+//			We can use what are called logical
+// operators. Logical operators take only logical
+// values as operands and yield only logical values
+// as results. For Example:
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	bool var1 = true, var2 = false;
+	int var3 = 10, var4 = 20;
+	
+	&&								// Logical "and" (both relations have to be true)
+    (var1 && var2)					// Evaluates false because var1 is true AND var2 is false
+	(var3 != var4 && var1 != var2)	// Evaluates true because var1 does not equal var2 AND var3 does not equal var4
+	
+	||								// Logical "or" (either of the relations have to be true)
+    (var1 || var2)					// Evaluates true because var1 is true even though var2 is false
+	(var3 == var4 || var1 != var2)	// Evaluates true because var1 does not equal var2
+	
+	!								// Logical "not" (the opposite)
+	(!var1)							// Evaluates false because var1 is true
+	(!var3)							// Literally evaluates to "not 10"
+
+	return 0;
+}
