@@ -1,0 +1,52 @@
+Style:
+	Lucario
+
+Language:
+	C++
+
+Color Information:
+	#eae0c8
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 9
+//
+// Topic:	C++ While Loops
+// Date:	January 7, 2019
+//
+// Summary:
+//			Every programming language uses loops
+// to accomplish different tasks. In C++, one way
+// of looping is by using the keyword "while".
+//			Code within a "while" loop is executed
+// when the relational and/or logical operator(s)
+// following the keyword "while" result in true. If
+// the result is false, the loop exits without
+// running any code.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int var1 = 10, var2 = 20;							// Declare Variables
+	bool abcd = true;
+	while(var1 < var2){									// Unless var1 is equal or greater than var2 the loop will execute
+		cout << "var1 is ";
+		cout << var2 - var1;							// Code in loop
+		cout << " less than var2\n";
+		var1 = var1 + 1;								// Add one to var1 to avoid infinite loop
+	}
+	while(abcd){										// Because a while loop accepts logical operators, a boolean value can be used
+		cout << "abcd is true\n";
+		abcd = false;
+	}
+	return 0;
+}
