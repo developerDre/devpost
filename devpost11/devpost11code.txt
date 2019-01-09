@@ -1,0 +1,45 @@
+Style:
+	Lucario
+
+Language:
+	C++
+
+Color Information:
+	#99ccff
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 11
+//
+// Topic:	C++ Do While Loops
+// Date:	January 9, 2019
+//
+// Summary:
+//			Along side while and for loops are
+// "do-while" loops. 
+//			Unlike a while loop, a "do-while" loop
+// runs the code inside it first and then checks to
+// see if the relational and/or logical operator(s)
+// result in true. If the result is true, the loop
+// executes the code again. This is useful if you
+// need code to execute at least once.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int var1 = 0;
+	do{											// Keyword "do" -start of the loop
+		cout << "var1 is: " << var1 << '\n';
+		var1++;
+	}while(var1 < 10);							// If var1 is less than 10 the loop will execute again
+	return 0;
+}
