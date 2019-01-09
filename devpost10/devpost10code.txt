@@ -1,0 +1,47 @@
+Style:
+	Lucario
+
+Language:
+	C++
+
+Color Information:
+	#B9AEC7
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 10
+//
+// Topic:	C++ For Loops
+// Date:	January 8, 2019
+//
+// Summary:
+//			In addition to while loops, another way
+// to loop a C++ program is to use a "for" loop.
+//			The keyword "for" allows a loop to run
+// a given number of times. Like a while loop or an
+// if statement, the loop executes if a condition is
+// true. A "for" loop takes 3 parameters separated
+// by semicolons: an initial statement, a loop
+// condition, and an update statement.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int var1;
+	for(var1 = 0; var1 < 10; var1++){					// A "for" loop's three parameters:
+														//	-Declare var1 as an int equal to zero
+														//	-Code within the loop will execute as long as var1 is less than 10
+														//	-Increment var1 by one for every execution of the loop
+		cout << "var1 is equal to: " << var1 << '\n';	// Code to execute if condition is true
+	}
+	return 0;
+}
