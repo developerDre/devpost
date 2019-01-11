@@ -1,0 +1,50 @@
+Style:
+	Lucario
+
+Language:
+	C++
+
+Color Information:
+	#c4e86b
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 12
+//
+// Topic:	C++ Break
+// Date:	January 10, 2019
+//
+// Summary:
+//			Sometimes in while, for, and do while
+// loops; as well as switch cases there is a need
+// to alter how the code behaves.
+//			One way that a loop's behavior can be
+// modified is by using the keyword "break". If a
+// program comes across "break" no remaining code
+// will be executed within the loop and the program
+// jumps to the next line outside the loop.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int var1;									// Declare variables
+	cout << "Enter a number: ";					// Ask the user for input
+	cin >> var1;								// Get the user's input
+	for(int i=0; i<var1; i++){					// Loop from 0 to the user's number
+		if(i == 18){							// Check if the loop has reached 18
+			cout << "18 has been reached\n";	// Print that the loop reached 18
+			break;								// Stop the for loop immediately
+		}
+		cout << i << '\n';						// print the value of i
+	}
+	return 0;
+}
