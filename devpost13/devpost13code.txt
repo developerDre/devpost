@@ -1,0 +1,51 @@
+Style:
+	Lucario
+
+Language:
+	C++
+
+Color Information:
+	#
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 13
+//
+// Topic:	C++ Continue
+// Date:	January 11, 2019
+//
+// Summary:
+//			Sometimes in while, for, and do while
+// loops there is a need to alter how the code
+// behaves. In addition to using the keyword break,
+// the reserved word "continue" can be helpful.
+//			The keyword "continue" forces the loop
+// to stop and immediately check the condition. If
+// the condition results in true the loop executes
+// again otherwise, the loop exits.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int num;
+	cin >> num;
+	while(cin){											// Check if cin is available
+		if (num < 0){
+			cout << "The number is Negative." << endl;	// Output if negative
+			cin >> num;
+			continue;									// Here the loop immediately jumps to line _____
+		}
+		cout << "The number is Positive." << endl;		// Output if positive
+		cin >> num;
+	}
+	return 0;
+}
