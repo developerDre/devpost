@@ -5,7 +5,7 @@ Language:
 	C++
 
 Color Information:
-	#
+	#3EC384
 
 Font:
 	Hack
