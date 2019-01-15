@@ -1,0 +1,57 @@
+Style:
+	Panda
+
+Language:
+	C++
+
+Color Information:
+	#8B776D
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 14
+//
+// Topic:	C++ Functions Overview
+// Date:	January 14, 2019
+//
+// Summary:
+//			In programming, it is essential to keep
+// clean code, both aesthetically and functionally.
+// One way to do this is to use functions.
+//			Generally speaking, a function is a set
+// of statements whose job is to do a certain task.
+// Functions serve the purpose of simplifying code
+// by dividing complicated programs into manageable
+// pieces. Functions are also helpful because they
+// can also be used multiple times in a program.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int printHello();					// Function deceleration (also called prototype) *
+
+int main(){
+	printHello();					// Function call (execute this function)
+	return 0;
+}
+
+int printHello(){					// Function definition **
+	cout << "Hello World!\n";		// Code within function
+	return 0;
+}									// End of function
+
+// *	Function decelerations must ALWAYS be before "int main()".
+// **	Function definitions can be either before or after main.
+
+// NOTE:	In some cases the compiler may allow for the function
+// to be defined and declared in the same block of code. In this
+// case, the function would be written as the definition but would
+// appear before "int main()".
