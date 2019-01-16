@@ -1,0 +1,58 @@
+Style:
+	Panda
+
+Language:
+	C++
+
+Color Information:
+	#6AA5A9
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 15
+//
+// Topic:	C++ Function Return Types
+// Date:	January 15, 2019
+//
+// Summary:
+//			Every function is declared and defined
+// with a return type. This allows the function to
+// return a data type to the parent function
+// (int main(){} is a function).
+//			Functions may only return one value at
+// a time but any data type may be returned.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+void myVoidFunction(){					// Returns nothing
+	cout << "My Function\n";			// Typically used for output to screen, etc.
+}
+int	myIntFunction(){
+	return 85;							// Returns the integer 85
+}
+double myDoubleFunction(){
+	return 4.37;						// Returns the double 4.37
+}
+
+int main(){
+	double a;
+	
+	myVoidFunction();					// Void return Type
+  
+	cout << myIntFunction() << '\n';	// Functions can be directly substituted for variables (prints "85" to the screen)
+  
+	a = myDoubleFunction() + 1.25;		// Function return types will be used in arithmetics (a will equal 5.62)
+	
+	return 0;
+}
+
+// NOTE:	It is not necessary to set the function equal to anything.
