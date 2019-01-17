@@ -1,0 +1,49 @@
+Style:
+	Panda
+
+Language:
+	C++
+
+Color Information:
+	#d1d5e8
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 16
+//
+// Topic:	C++ Function Parameters
+// Date:	January 16, 2019
+//
+// Summary:
+//			In order to have a function do work on
+// or with data in a program, it must be able to
+// access that data. This is done with the use of
+// parameters separated by commas.
+//			A function can accept any number of
+// parameters as long as they are declared. A
+// function's parameters are declared just like any
+// variable, with a data type and identifier.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int addNumbers(int, int);					// Function parameters in the deceleration do not need to be named but can be.
+
+int main(){
+	int a = 2, b;
+	b = addNumbers(a, 5);					// No data type in the function call and variables are not necessary 
+	cout << b << '\n';						// Will print "7"
+	return 0;
+}
+
+int addNumbers(int x, int y){				// A function's parameters can be named different than the variables being passed in.
+	return x+y;
+}
