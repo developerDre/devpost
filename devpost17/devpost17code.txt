@@ -1,0 +1,49 @@
+Style:
+	Panda
+
+Language:
+	C++
+
+Color Information:
+	#F0BBAD
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 17
+//
+// Topic:	C++ Function Parameters Pt.2
+// Date:	January 17, 2019
+//
+// Summary:
+//			Last post covered function parameters.
+// All the data passed to functions thus far have
+// been done so in a "pass by value" method.
+//			This is OK for smaller programs but as
+// programs grow larger, it may become important to
+// conserve memory since every time a function is
+// called it uses more memory for its parameters.
+// This is done by the "pass by reference" method.
+// ************************************************
+
+#include <iostream>
+using namespace std;
+
+int addNumbers(int&, int&);					// Pass by reference uses the & symbol after the data type
+
+int main(){
+	int a = 2, b = 4;
+	b = addNumbers(a, b);					// Pass by reference can only use variables not constant values passed in
+	cout << b << '\n';						// This will print "6" to the screen
+	return 0;
+}
+
+int addNumbers(int& x, int& y){				// Pass by reference also does not require the same names as in the parent function
+	return x+y;
+}
