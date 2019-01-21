@@ -1,0 +1,48 @@
+Style:
+	Panda
+
+Language:
+	C++
+
+Color Information:
+	#CACEEA
+
+Font:
+	Hack
+
+Export:
+	x4
+	PNG
+
+Code:
+// ************************************************
+//              #cppdevpost number 18
+//
+// Topic:	C++ Predefined Functions
+// Date:	January 18, 2019
+//
+// Summary:
+//			User-Defined functions are helpful when
+// it comes to simplicity of code. However, writing
+// functions to do complex tasks such as changing a
+// the case of a character from upper to lower can
+// be a challenge.
+//			This is where Predefined functions play
+// a role. Predefined functions are simply functions
+// that can be included into a program without the
+// need to define them.
+// ************************************************
+
+#include <iostream>
+#include <cctype>										// cctype is included for the use of the predefined toupper() function
+using namespace std;
+
+int main(){
+	char x;
+	cout << "enter a letter: ";
+	cin >> x;
+	
+	cout << "The letter is: " << toupper(x) << '\n';	// The toupper() function does not need to be declared or defined because it was included from the cctype library 
+	
+	return 0;
+}
