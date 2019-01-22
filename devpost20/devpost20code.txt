@@ -1,0 +1,51 @@
+Style:
+	Monokai
+
+Language:
+	C++
+
+Color Information:
+	#F4A41A
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 20
+//
+// Topic:	C++ Common Array Errors
+// Date:	January 22, 2019
+//
+// Summary:
+//			Occasionally, when a program has an error
+// in it, the program may try to access an index of
+// an array that is "out of bounds". When this occurs
+// either the program terminates with a segmentation
+// fault or a seemingly random value is returned.
+//			Since C++ does not check weather an index
+// is within bounds, it is imperative that all arrays
+// are kept track of.
+// **************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	char ary1[2] = {'H', 'I'};
+	int myNum = 45;
+	for(int i=0; i<3; i++){					// There will NOT be a compile error but, the
+		cout << ary1[i] << ' ';				// output will be "H I 5". **
+	}
+	cout << '\n';
+	return 0;
+}
+
+// **	The last character printed will be 5 because a binary 45 is 5 on the ASCII table.
+
+// NOTE:	Both reading and writing data to an "out of bounds" index can be done. In the
+//			latter case, this is called a "buffer overflow".
