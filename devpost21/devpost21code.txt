@@ -1,0 +1,48 @@
+Style:
+	Monokai
+
+Language:
+	C++
+
+Color Information:
+	#CCABD8
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 21
+//
+// Topic:	C++ Arrays as Function Parameters
+// Date:	January 23, 2019
+//
+// Summary:
+//			It is very common to pass an array as a
+// parameter to a function. this is done by passing
+// by reference (see devpost number 17).
+//			In this case, because arrays can only be
+// passed by reference, it is not required that the
+// "&" symbol be used. However, when declaring a one
+// dimensional array as a parameter, the size of the
+// array is usually omitted.
+// **************************************************
+
+#include <iostream>
+using namespace std;
+
+int sumAry(int x[]);						// Passing an array does not use the & symbol
+
+int main(){
+	int a[4] = {1, 3, 4, 7};
+	cout << sumAry(a) << '\n';				// The array index should not be included when calling the function
+	return 0;
+}
+
+int sumAry(int x[]){
+	return x[0] + x[1] + x[2] + x[3];
+}
