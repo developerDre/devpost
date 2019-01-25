@@ -1,0 +1,58 @@
+Style:
+	Monokai
+
+Language:
+	C++
+
+Color Information:
+	#99ABB9
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 22
+//
+// Topic:	C++ Parallel Arrays
+// Date:	January 24, 2019
+//
+// Summary:
+//			Arrays are really nice at keeping all the
+// data you need in one easy to access spot. But what
+// if we need different types of data in that array?
+//			This is where parallel arrays come in
+// handy. Two or more arrays are called parallel
+// if their corresponding components hold related
+// information.
+// **************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int age[3];								// First parallel array
+	double height[3];						// Second parallel array
+	double weight[3];						// Third parallel array
+	
+	for(int i=0; i<3; i++){
+		cout << "Enter person's age: ";		// There is really nothing special about parallel
+		cin >> age[i];						// arrays other than they are all used to hold
+		cout << "Enter person's height: ";	// related data.
+		cin >> height[i];
+		cout << "Enter person's weight: ";
+		cin >> weight[i];
+	}
+	for(int i=0; i<3; i++){
+		cout	<< " " << age[i]
+				<< " " << height[i]
+				<< " " << weight[i]
+				<< '\n';
+	}
+	
+	return 0;
+}
