@@ -1,0 +1,54 @@
+Style:
+	Monokai
+
+Language:
+	C++
+
+Color Information:
+	#F7C281
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 23
+//
+// Topic:	C++ Multi-Dimensional Arrays
+// Date:	January 25, 2019
+//
+// Summary:
+//			Thus far we have only covered single-
+// dimensional arrays. However, creating arrays with
+// more than one dimension can be useful, especially
+// when dealing with tables of data.
+//			Multi-Dimensional arrays are declared the
+// same way as single-dimensional arrays but with two
+// or more index sizes. The first index is one
+// direction in the table and the second is another.
+// **************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int book[3][6];										// Declare a 2 dimensional array
+
+	int numOfCars[2][3]={{2, 3, 1},{15, 25, 13}};		// Declare and initialize a 2 dimensional array
+	cout << numOfCars[1][1] << '\n';					// This will output "25"
+	numOfCars[1][1] = 23;
+	
+	for(int i=0; i<2; i++){
+		for(int w=0; w<3; w++){
+			cout << numOfCars[i][w] << ' ';
+		}
+		cout << '\n';
+	}
+	
+	char fourDimens[4][5][2][7];						// Example of a 4-dimensional array.
+	return 0;
+}
