@@ -1,0 +1,49 @@
+Style:
+	Zenburn
+
+Language:
+	C++
+
+Color Information:
+	#7EA00E
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 24
+//
+// Topic:	C++ Strings
+// Date:	January 28, 2019
+//
+// Summary:
+//			Arrays are helpful and simple ways to
+// store words. There is an alternative called
+// strings.
+//			Strings are an easy way of implementing
+// words. Strings are simply an array of characters,
+// though the string library comes with some pretty
+// interesting predefined functions.
+// **************************************************
+
+#include <iostream>
+#include <string>				// Include the sting library
+using namespace std;
+
+int main(){
+	
+	char name[20] = {"Sally"};	// Fixed Length c-string (character array)
+	
+	string name = "Sally"		// Dynamic length string
+	
+	return 0;
+}
+
+// NOTE:	Strings are an "automatic" version of character arrays.
+// character arrays will always use a fixed amount of memory. Whereas
+// strings are dynamic and will only use as much memory as they need.
