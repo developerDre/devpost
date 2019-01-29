@@ -1,0 +1,48 @@
+Style:
+	Zenburn
+
+Language:
+	C++
+
+Color Information:
+	#
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 25
+//
+// Topic:	C++ String Functions
+// Date:	January 29, 2019
+//
+// Summary:
+//			Since character arrays can be easily
+// manipulated it is necessary to have this same
+// ability for strings.
+//			Predefined functions included in the
+// string library are very helpful when manipulating
+// strings.
+// **************************************************
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+	int intval = 56;
+	string s1 = to_string(intval);	// Convert numerical value to string
+	string s2 = "3" + s1 + "1";		// Add characters directly to the beginning or end
+	intval = stoi(s2);				// Convert string to integer
+	cout << intval << '\n';			// Will output "3561"
+	
+	return 0;
+}
+
+// NOTE:	There is also a library called <cstring> that
+// includes some functions for manipulating character arrays.
