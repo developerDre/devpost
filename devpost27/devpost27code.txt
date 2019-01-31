@@ -1,0 +1,49 @@
+Style:
+	Zenburn
+
+Language:
+	C++
+
+Color Information:
+	#ee9c6c
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 27
+//
+// Topic:	C++ Enumeration Types
+// Date:	January 31, 2019
+//
+// Summary:
+//			In C++ we can create our own simple data
+// types, known as the enumeration types. In ensuing
+// posts, we will cover more advanced techniques to
+// create complex data types.
+//			Enumeration is done with the keyword
+// "enum" followed by the type name and value names in
+// brackets.
+// **************************************************
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	enum animal {cat, dog, turtle} c;			// Declare an enum animal
+	c = dog;									// Set animal c to dog
+	cout << "The animal is: " << c << '\n';
+	animal f = turtle;							// set animal f to turtle
+	cout << "The animal is: " << f << '\n';
+	
+	return 0;
+}
+
+// NOTE:	Using enums with cout will output the array
+// position of the variable not the name. For example,
+// on line _____________ the output will be a "2".
