@@ -1,0 +1,52 @@
+Style:
+	Zenburn
+
+Language:
+	C++
+
+Color Information:
+	#D8E8E8
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 28
+//
+// Topic:	C++ Structures
+// Date:	February 1st, 2019
+//
+// Summary:
+//			Using arrays to hold similar types of
+// data is easy, but using parallel arrays to store
+// different types of data can be a hassle when it
+// comes to passing them into functions.
+//			One way around this problem is to use a
+// structure of data types. These structures can hold
+// different types of data and can also be used in an
+// array format.
+// **************************************************
+
+#include <iostream>
+using namespace std;
+
+struct animal{						// Define a structure with the keyword "struct"
+	string name;					// Declare members of animal
+	int age;
+};									// Semi-colon needed after deceleration.
+
+int main(){
+	animal dog;						// Declare a struct
+	dog.name = "max";				// Access members of a struct with the "dot" operator
+	dog.age = 2;
+	cout << dog.name << '\n';
+	cout << dog.age << '\n';
+	
+	animal cat[2];					// Declare an array of structs
+	return 0;
+}
