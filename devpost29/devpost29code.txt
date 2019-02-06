@@ -1,0 +1,50 @@
+Style:
+	Dracula
+
+Language:
+	C++
+
+Color Information:
+	#669966
+
+Font:
+	Space Mono
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 29
+//
+// Topic:	C++ Structures Pt. 2
+// Date:	February 4th, 2019
+//
+// Summary:
+//			As discussed in post 28, a structures'
+// members are accessed with the dot operator.
+//			A structure's members can be used just as
+// normal variables. For example, they can be used in
+// assignment statements or input/output statements.
+// **************************************************
+
+#include <iostream>
+using namespace std;
+
+struct person{
+	int age;
+};											// Semi-colon needed after deceleration.
+
+int main(){
+	person p1;								// Declare struct
+	person p2;
+	p1.age = 21;							// Set members
+	p2.age = 34;
+	if(p1.age == p2.age){					// Compare members of different structs
+		cout << "Both are equal\n";
+	}else{
+		cout << "Both are not equal\n";
+	}
+	return 0;
+}
