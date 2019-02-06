@@ -1,0 +1,55 @@
+Style:
+	Dracula
+
+Language:
+	C++
+
+Color Information:
+	#D1DCE2
+
+Font:
+	Space Mono
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 30
+//
+// Topic:	C++ Namespaces
+// Date:	February 5th, 2019
+//
+// Summary:
+//			In 1998, a standard was developed that
+// tried to solve the problem of overlapping global
+// identifier names with the namespace mechanism.
+//			A namespace can contain constants,
+// variables, and even functions that are global to
+// the program. Namespace members are accessed using
+// the scope resolution operator "::".
+// **************************************************
+
+#include <iostream>
+using namespace std;
+
+namespace globalType{
+	const float pi = 3.14159;
+	int count = 0;
+}
+
+void printType(){
+	globalType::count++;
+	cout << globalType::count << endl;
+}
+
+int main(){
+	cout << globalType::pi << endl;
+	printType();
+	return 0;
+}
+
+// NOTE:	Unlike structs that have to be passed into functions, namespaces
+// are global to the program. This means that namespaces cannot be passed into
+// functions and that EVERY function has access to the data in the namespace.
