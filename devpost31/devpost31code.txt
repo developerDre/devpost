@@ -1,0 +1,45 @@
+Style:
+	Dracula
+
+Language:
+	C++
+
+Color Information:
+	#D1CE1D
+
+Font:
+	Space Mono
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 31
+//
+// Topic:	C++ Compiling
+// Date:	February 6th, 2019
+//
+// Summary:
+//			Compiling programs written in C++ can be
+// done many ways such as GNU, Visual Studio or even
+// a Makefile.
+//			This is how to compile a program using
+// the GNU G++ compiler on both windows and *nix
+// machines.
+// **************************************************
+
+$ g++ <input file(s)> -o <output file>
+
+// Meaning:
+// g++					The executable. This is what does the compiling.
+// <input file(s)>		Specify the input file(s) for the program.
+// -o					Output Flag (followed by the output file name).
+// <output file>		Name for the output file
+
+// Other options for diffrent flags exist and can be found by using the command:
+$ g++ --help
+
+// NOTE:	Yes, there may be multiple input files. This will be
+// covered in a later post.
