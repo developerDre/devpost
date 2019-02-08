@@ -1,0 +1,110 @@
+Style:
+	Dracula
+
+Language:
+	C++
+
+Color Information:
+	#B363C9
+
+Font:
+	Space Mono
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 32
+//
+// Topic:	C++ Compiling Multiple Files
+// Date:	February 7th, 2019
+//
+// Summary:
+//			Last post covered compiling, but only
+// showed how to compile a program with one file.
+//			Many compilers, including g++, allow for
+// multiple files to be included at compile time.
+// This allows for a program to be split up into
+// multiple smaller files. This post shows how to use
+// header files and separate .cpp files.
+// **************************************************
+                                                                                                  
+// General structure of a header file (saved as "<name>.h").
+
+#ifndef _COMPILING_H_				// "ifndef" checks to see if "_COMPILING_H_" has been
+#define _COMPILING_H_				 // declared yet. If it has, the compiler will skip all
+									// the code until "endif". "define" allong with "ifndef"
+									// are to avoid double declaring and other issues in a
+									// program. "_COMPILING_H_" is a variable and should be
+									// different for every header file.
+
+#include <iostream>					// Included files can be stated within a header file.
+
+using namespace std;				// namespaces can also be stated inside of header files.
+
+void printNumber(int);				// Function decelerations should be put in header files.
+
+#endif								// "endif" is the last thing of the header file. this tell the
+									// compiler where to end the if statement on line 18.
+
+// NOTE:	A hash symbol is called a preprocessor directive. ALL the code with a hash
+// is gone through by the compiler before the compilation of the rest of the program.
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 32
+//
+// Topic:	C++ Compiling Multiple Files
+// Date:	February 7th, 2019
+//
+// Summary:
+//			Last post covered compiling, but only
+// showed how to compile a program with one file.
+//			Many compilers, including g++, allow for
+// multiple files to be included at compile time.
+// This allows for a program to be split up into
+// multiple smaller files. This post shows how to use
+// header files and separate .cpp files.
+// **************************************************
+                                                                                                  
+// General structure of a cpp file (saved as "<name>.cpp").
+
+#include "<name>.h"					// The header file with the function declerations MUST be
+									// included. "iostream" does not need to be included because
+									// it has already been included in the header file.
+
+void printNumber(int num){			// Functions are defined as normal. They do not have to be
+	cout << "The number is: ";		// in the same file as int main().
+	cout << num << endl;
+}
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 32
+//
+// Topic:	C++ Compiling Multiple Files
+// Date:	February 7th, 2019
+//
+// Summary:
+//			Last post covered compiling, but only
+// showed how to compile a program with one file.
+//			Many compilers, including g++, allow for
+// multiple files to be included at compile time.
+// This allows for a program to be split up into
+// multiple smaller files. This post shows how to use
+// header files and separate .cpp files.
+// **************************************************
+                                                                                                  
+// General structure of a cpp file (saved as "<name>.cpp").
+
+#include "<name>.h"					// The header file must be included in all files that use
+									// parts of it. (the printNumber function)
+
+int main(){							// int main() does not need to be declared in a header file.
+	printNumber(4);					// it is declared by default by the compiler.
+	return 0;
+}
