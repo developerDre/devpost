@@ -1,0 +1,70 @@
+Style:
+	Material
+
+Language:
+	C++
+
+Color Information:
+	#3E9022
+
+Font:
+	Fira Code
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 35
+//
+// Topic:	C++ Classes And Data Abstraction Pt. 2
+// Date:	February 13th, 2019
+//
+// Summary:
+//			In post number 34, we covered creating a
+// class. declaring and using members of the class is
+// the same as structs except you cannot access
+// private members of the class.
+// **************************************************
+
+#include "classes.h"				// File from post 34
+
+int main(){
+	myClass m1;
+	
+	m1.myInt = 4;					// This will result in an error because "myInt" is private.
+	m1.setInt(4);					// Use this instead.
+	
+	cout << m1.getInt() << '\n';	// Only public members can be accessed from outside the scope of the class.	
+	
+}
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 35
+//
+// Topic:	C++ Classes And Data Abstraction Pt. 2
+// Date:	February 13th, 2019
+//
+// Summary:
+//			In post number 34, we covered creating a
+// class. declaring and using members of the class is
+// the same as structs except you cannot access
+// private members of the class.
+// **************************************************
+
+#ifndef _CLASSES_H_
+#define _CLASSES_H_
+#include <iostream>
+using namespace std;
+
+class myClass{
+	private:
+    	int myInt;
+	public:
+		void setInt(int);
+		int getInt();
+}
+#endif
