@@ -1,0 +1,86 @@
+Style:
+	Material
+
+Language:
+	C++
+
+Color Information:
+	#E894A7
+
+Font:
+	Fira Code
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 34
+//
+// Topic:	C++ Classes And Data Abstraction
+// Date:	February 11th, 2019
+//
+// Summary:
+//			C++ is an Object Oriented Programming
+// language. This means that the use of classes and
+// inheritance is possible.
+//			Classes are similar to structs except
+// that members can be privatized within classes.
+// Classes use the keyword "class" followed by the
+// class name, the members, and a semicolon. Classes
+// are typically defined in a header file and their
+// respective functions in a separate cpp file.
+// **************************************************
+
+#ifndef _CLASSES_H_
+#define _CLASSES_H_
+#include <iostream>
+using namespace std;
+
+class myClass{						// Define a class "myClass"
+
+	private:						// Private members of a class cannot be accessed from
+    	int myInt;					//  outside of the class. This means that in order to be
+									//  able to use "myInt" there must be a "public" function
+									//  to do so.
+	public:							// Public members of a class are able to be accessed from
+									//  outside the class.
+		void setInt(int);			// A "setter" function sets the private data type equal
+									//  to what is passed into the function.
+		int getInt();				// A "getter" function returns the value of the private
+									//  data type to the program.
+}
+#endif
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 34
+//
+// Topic:	C++ Classes And Data Abstraction
+// Date:	February 11th, 2019
+//
+// Summary:
+//			C++ is an Object Oriented Programming
+// language. This means that the use of classes and
+// inheritance is possible.
+//			Classes are similar to structs except
+// that members can be privatized within classes.
+// Classes use the keyword "class" followed by the
+// class name, the members, and a semicolon. Classes
+// are typically defined in a header file and their
+// respective functions in a separate cpp file.
+// **************************************************
+
+#include "classes.h"
+
+void myClass::setInt(int x){		// The "::" is called the scope resolution operator.
+									// This is used when accessing members of a class.
+	myInt = x;						// A "setter" function sets the private data type 
+									//  equal to what is passed into the function.
+}
+int myClass::getInt(){
+	return myInt;					// A "getter" function returns the value of the private
+									//  data type to the program.
+}
