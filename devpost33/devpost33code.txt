@@ -1,0 +1,53 @@
+Style:
+	Dracula
+
+Language:
+	C++
+
+Color Information:
+	#D1CE1D
+
+Font:
+	Space Mono
+
+Export:
+	x4
+	PNG
+
+Code:
+# **************************************************
+#               #cppdevpost number 33
+#
+# Topic:	C++ Makefile
+# Date:	February 8th, 2019
+#
+# Summary:
+#			Compiling programs with relatively small
+# amounts of code takes little time, however, larger
+# programs can take much longer. Even if a minor
+# change is made to a program, if the whole program
+# is re-compiled, valuable time can be lost.
+#			One way to avoid this problem is to use
+# the program called "make". Make uses a script to
+# compile, so it does not have the same format as a
+# C++ program.
+# **************************************************
+
+# List source .cpp files separated by spaces (no header files)
+SOURCES=Program.cpp Functions.cpp
+# Name object files the same as their respective .cpp files
+OBJECTS=$(SOURCES:.cpp=.o)
+
+# Part that compiles the program
+# The output file will be called "Program"
+Start: $(SOURCES) Program
+Program: $(OBJECTS) 
+	g++ $(OBJECTS) -o $@ -Wall
+
+# Compiles the object files
+.cpp.o:
+	g++ -c $< -o $@ -Wall
+
+# Cleanup Routines:
+clean:
+	rm $(OBJECTS) Program
