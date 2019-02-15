@@ -1,0 +1,83 @@
+Style:
+	Material
+
+Language:
+	C++
+
+Color Information:
+	#DADADA
+
+Font:
+	Fira Code
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 36
+//
+// Topic:	C++ Class Constructors
+// Date:	February 14th, 2019
+//
+// Summary:
+//			After a class is created it needs the
+// functionality to to allow for defaults. A class
+// cannot be declared and used without setting its
+// data members equal to something. This is where
+// default constructors come into play.
+//			When declaring a class, either a default
+// constructor or a non-default constructor can be
+// used.
+// **************************************************
+
+#ifndef _CLASSES_H_
+#define _CLASSES_H_
+#include <iostream>
+using namespace std;
+
+class myClass{
+	private:
+    	int myInt;
+	public:
+		void setInt(int);
+		int getInt();
+		
+		myClass();					// Default constructor, it does not have a return type and no parameters
+		myClass(int);				// Non-default constructor, it has no return type but has parameters
+}
+
+#endif
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 36
+//
+// Topic:	C++ Class Constructors
+// Date:	February 14th, 2019
+//
+// Summary:
+//			After a class is created it needs the
+// functionality to to allow for defaults. A class
+// cannot be declared and used without setting its
+// data members equal to something. This is where
+// default constructors come into play.
+//			When declaring a class, either a default
+// constructor or a non-default constructor can be
+// used.
+// **************************************************
+
+void myClass::setInt(int x){
+	myInt = x;
+}
+int myClass::getInt(){
+	return myInt;
+}
+myClass::myClass(){					// Default constructor - no return type, scope resolution operator
+	setInt(0);						// Set default by using the setter function
+}
+myClass::myClass(int x){			// Non-default constructor - no return type, has parameters, scope resolution operator
+	setInt(x);						// Set int to x by using the setter function
+}
