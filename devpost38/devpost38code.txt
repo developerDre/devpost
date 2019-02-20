@@ -1,0 +1,81 @@
+Style:
+	Material
+
+Language:
+	C++
+
+Color Information:
+	#
+
+Font:
+	Fira Code
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 38
+//
+// Topic:	C++ Arrays of Classes
+// Date:	February 19th, 2019
+//
+// Summary:
+//			When using classes in C++, there is the
+// need to use a destructor to free memory.
+//			This will become more important when
+// dynamic memory allocation starts to be used.
+// **************************************************
+
+#ifndef _CLASSES_H_
+#define _CLASSES_H_
+#include <iostream>
+using namespace std;
+
+class myClass{
+	private:
+    	int myInt;
+	public:
+		void setInt(int);
+		int getInt();
+		myClass();
+		myClass(int);
+		
+		~myClass();				// Destructor deceleration
+}
+
+#endif
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 38
+//
+// Topic:	C++ Arrays of Classes
+// Date:	February 19th, 2019
+//
+// Summary:
+//			When using classes in C++, there is the
+// need to use a destructor to free memory.
+//			This will become more important when
+// dynamic memory allocation starts to be used.
+// **************************************************
+
+#include "classics.h"
+
+void myClass::setInt(int x){
+	myInt = x;
+}
+int myClass::getInt(){
+	return myInt;
+}
+myClass::myClass(){
+	setInt(0);
+}
+myClass::myClass(int x){
+	setInt(x);
+}
+myClass::~myClass(){			// Destructor definition
+								// This is where dynamic deletion code goes.
+}
