@@ -1,0 +1,44 @@
+Style:
+	Material
+
+Language:
+	C++
+
+Color Information:
+	#30895E
+
+Font:
+	Fira Code
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 37
+//
+// Topic:	C++ Arrays of Classes
+// Date:	February 18th, 2019
+//
+// Summary:
+//			Classes, just like any other data type,
+// can be made into an array. this allows for an easy
+// way to declare many class objects rather than
+// declaring them all separately.
+//			Arrays of classes are declared just like
+// any other array but with <className> as the type.
+// **************************************************
+
+#include "classes.h"				// File from post 34 (updated with constructors from 36)
+
+int main(){
+	myClass mC1[3];					// Declares an array of 3 objects of type "myClass"
+	
+	mC1[0].setInt(5);				// Sets mC1[0]'s int member equal to 5
+	mC1[2].setInt(3);
+	
+	cout << mC1[0].getInt();		// Returns the 5 set on line -----------
+	
+	return 0;
+}
