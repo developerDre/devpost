@@ -1,0 +1,79 @@
+Style:
+	Material
+
+Language:
+	C++
+
+Color Information:
+	#D3E7EE
+
+Font:
+	Fira Code
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 39
+//
+// Topic:	C++ Inheritance
+// Date:	February 20th, 2019
+//
+// Summary:
+//			Another feature of classes is being able
+// to create new classes from existing classes. This
+// important feature encourages code reuse. 
+//			In C++, classes can be related in many
+// ways. One of the most common ways is called
+// inheritance.
+// **************************************************
+
+#ifndef _PROG_H_
+#define _PROG_H_
+#include <iostream>
+#include "empl.h"						// Include the header file with the "employee" deceleration
+using namespace std;
+
+class programmer: public employee{		// "Derived Class" - This class called "programmer" contains everything from the "employee" class
+	private:
+    	bool knowsCPP;
+	public:
+		void set_knowsCPP(bool);
+		bool get_knowsCPP();
+}
+
+#endif
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 39
+//
+// Topic:	C++ Inheritance
+// Date:	February 20th, 2019
+//
+// Summary:
+//			Another feature of classes is being able
+// to create new classes from existing classes. This
+// important feature encourages code reuse. 
+//			In C++, classes can be related in many
+// ways. One of the most common ways is called
+// inheritance.
+// **************************************************
+
+#ifndef _EMPL_H_
+#define _EMPL_H_
+#include <iostream>
+using namespace std;
+
+class employee{							// "Base Class" - This is what "programmer" is derived from
+	private:
+    	bool isWorking;
+	public:
+		void set_isWorking(bool);
+		bool get_isWorking();
+}
+
+#endif
