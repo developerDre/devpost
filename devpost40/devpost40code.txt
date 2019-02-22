@@ -1,0 +1,69 @@
+Style:
+	Material
+
+Language:
+	C++
+
+Color Information:
+	#
+
+Font:
+	Fira Code
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 40
+//
+// Topic:	C++ Composition
+// Date:	February 21st, 2019
+//
+// Summary:
+//			Another way to create classes based on
+// other classes in C++ is called composition.
+//			Composition is when one or more members
+// of a class are objects of another class type
+// **************************************************
+
+#ifndef _PROG_H_
+#define _PROG_H_
+#include <iostream>
+#include "empl.h"
+using namespace std;
+
+class office{
+	private:
+    	employee emp;					// In this case, we are declaring there to be 1 employee in class "office"
+	public:
+		void set_employee(employee);	// We pass in an employee type
+		employee get_employee();		// We return an employee type
+}
+
+#endif
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 40
+//
+// Topic:	C++ Composition
+// Date:	February 21st, 2019
+//
+// Summary:
+//			Another way to create classes based on
+// other classes in C++ is called composition.
+//			Composition is when one or more members
+// of a class are objects of another class type
+// **************************************************
+
+#include "office.h"
+
+void office::set_employee(employee x){
+	emp = x;
+}
+employee office::get_employee(){
+	return emp;
+}
