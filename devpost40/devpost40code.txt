@@ -19,7 +19,7 @@ Code:
 //               #cppdevpost number 40
 //
 // Topic:	C++ Composition
-// Date:	February 21st, 2019
+// Date:	February 22nd, 2019
 //
 // Summary:
 //			Another way to create classes based on
@@ -50,7 +50,7 @@ class office{
 //               #cppdevpost number 40
 //
 // Topic:	C++ Composition
-// Date:	February 21st, 2019
+// Date:	February 22nd, 2019
 //
 // Summary:
 //			Another way to create classes based on
