@@ -1,0 +1,114 @@
+Style:
+	Base 16(Dark)
+
+Language:
+	C++
+
+Color Information:
+	#DA2864
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 42
+//
+// Topic:	C++ Polymorphism and Operator Overloading
+// Date:	February 27th, 2019
+//
+// Summary:
+//			Another common thing in C++ that can be
+// overloaded are operators. This allows for greater
+// control over a class as well as easier
+// programmability.
+//			This is accomplished by using the keyword
+// "operator" followed by the operator to be
+// overloaded. Every operator can be overloaded except
+// ".", ".*", "::", "?:", and "sizeof".
+// **************************************************
+
+#ifndef _CLASSES_H_
+#define _CLASSES_H_
+#include <iostream>
+using namespace std;
+
+class myClass{
+	private:
+    	int myInt;
+	public:
+		void setMyInt(int);
+		
+		bool operator==(const myClass&) const;		// This will allow the direct comparison between two objects of type "myClass"
+}
+
+#endif
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 42
+//
+// Topic:	C++ Polymorphism and Operator Overloading
+// Date:	February 27th, 2019
+//
+// Summary:
+//			Another common thing in C++ that can be
+// overloaded are operators. This allows for greater
+// control over a class as well as easier
+// programmability.
+//			This is accomplished by using the keyword
+// "operator" followed by the operator to be
+// overloaded. Every operator can be overloaded except
+// ".", ".*", "::", "?:", and "sizeof".
+// **************************************************
+
+#include "classes.h"
+
+void setMyInt(int x){
+	myInt = x;
+}
+
+bool myClass::operator==(const myClass& x) const{	// Definition of overloaded "=="
+	return myInt == x.myInt;
+}
+
+//----------------------------------------------------------------------------------------------------------
+
+// **************************************************
+//               #cppdevpost number 42
+//
+// Topic:	C++ Polymorphism and Operator Overloading
+// Date:	February 27th, 2019
+//
+// Summary:
+//			Another common thing in C++ that can be
+// overloaded are operators. This allows for greater
+// control over a class as well as easier
+// programmability.
+//			This is accomplished by using the keyword
+// "operator" followed by the operator to be
+// overloaded. Every operator can be overloaded except
+// ".", ".*", "::", "?:", and "sizeof".
+// **************************************************
+
+#include "classes.h"
+
+int main(){
+	myClass m1, m2;
+	
+	m1.setMyInt(1);
+	m2.setMyInt(2);
+	
+	if(m1 == m2){
+		cout << "Equal\n";
+	}else{
+		cout << "Not Equal\n";
+	}
+	
+	return 0;
+}
