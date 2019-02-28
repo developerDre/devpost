@@ -1,0 +1,51 @@
+Style:
+	Base 16(Dark)
+
+Language:
+	C++
+
+Color Information:
+	#DC67E9
+
+Font:
+	Source Code Pro
+
+Export:
+	x4
+	PNG
+
+Code:
+// **************************************************
+//               #cppdevpost number 41
+//
+// Topic:	C++ Polymorphism and Function Overloading
+// Date:	February 25th, 2019
+//
+// Summary:
+//			As C++ is an Object Oriented Programming
+// language, it allows for Polymorphism. This is also
+// called overloading and it is the ability to use
+// the same expression to perform different
+// operations.
+//			One of the most common things to overload
+// are functions. This is accomplished by having more
+// than one definition of a function.
+// **************************************************
+
+#ifndef _CLASSES_H_
+#define _CLASSES_H_
+#include <iostream>
+using namespace std;
+
+class myClass{
+	private:
+    	int myInt;
+	public:
+		myClass();				// Constructors are an example of function overloading
+		myClass(int);
+		
+		int myFunc();			// Two separate decelerations of a function.
+		int myFunc(int, bool);	// They all need the same return type
+}
+
+#endif
